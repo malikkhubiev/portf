@@ -1,0 +1,777 @@
+// Fonts
+
+// Colors
+@blue: #4285F4;
+@green: #0F9D58;
+@yellow: #F4B400;
+// Main Items
+.mySection{
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.myContainer{
+    max-width: 1522px;
+    padding: 0 50px;
+    width: 100%;
+    display: flex;
+}
+.text{
+    width: 100%;
+    margin: 20px 0;
+    font-size: 36px;
+    font-style: italic;
+}
+.newStyle{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    color: transparent !important;
+}
+.blue{
+    background-color: @blue;
+}
+.green{
+    background-color: @green;
+}
+.yellow{
+    background-color: @yellow;
+}
+// Main Settings
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}                    
+::-webkit-scrollbar-thumb {
+    background-color: @green;
+}                           
+::-webkit-scrollbar{
+    width: 3px;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    width: 100%;
+    color: #fff;
+    background-color: #0f0f0f;
+    font-family: Century Gothic, sans-serif;
+    overflow-x: hidden;
+    margin-left: -2px;
+}
+a{
+    color: white;
+    &:hover{
+        color: white;
+        text-decoration: none;
+        border: none;
+    }
+}
+p{
+    word-break: break-word;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    word-break: break-word;
+    margin: 0;
+    font-size: 150px;
+    font-weight: bold;
+}
+img{
+    display: inline-block;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+button{
+    padding: 0;
+}
+button:focus{
+    outline: none;
+}
+input:focus{
+    outline: none;
+}
+textarea:focus{
+    outline: none;
+}
+// Main Code
+.section-home{
+    padding-top: 0;
+    &-container{
+        justify-content: center;
+        align-items: flex-start;
+        &-desc{
+            max-width: 800px;
+            margin: 250px 100px 250px 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            &-title{
+                font-size: 65px;
+            }
+            &-text{
+                margin: 10px 0 30px 0;
+            }
+            &-button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 0.5s;
+                border: 0;
+                background-color: transparent;
+                text-transform: uppercase;
+                color: white;
+                font-size: 30px;
+                &::before{
+                    content: '';
+                    transition: 0.5s;
+                    display: inline-block;
+                    width: 50px;
+                    height: 1px;
+                    margin-right: 10px;
+                    background-color: #fff;
+                }
+                &:hover{
+                    letter-spacing: 10px;
+                }
+            }
+        }
+        &-nav{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            &-list{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                position: relative;
+                text-align: center;
+                &-link{
+                    cursor: pointer;
+                    transition: 0.5s;
+                    font-size: 30px;
+                    padding-bottom: 5px;
+                    border-bottom: 2px solid transparent;
+                    &::before{
+                        content: '';
+                        display: block;
+                        width: 1px;
+                        height: 500px;
+                        margin: 0 auto;
+                        background-color: #fff;
+                    }
+                    &:hover{
+                        border-bottom: 2px solid #fff;
+                    }
+                }
+                .secondLink{
+                    &::before{
+                        height: 250px;
+                    }
+                }
+                .thirdLink{
+                    &::before{
+                        height: 350px;
+                    }
+                }
+            }
+        }
+    }
+}
+.section-aboutMe{
+    &-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &-desc{
+            width: 100%;
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            &-sec{
+                width: 100%;
+                margin-bottom: 200px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                position: relative;
+                &-skill{
+                    top: 50%;
+                    font-size: 36px;
+                    position: absolute;
+                    right: 15%;
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+                .secondSkill{
+                    max-width: 190px;
+                    transform: translateY(-50%) rotate(45deg);
+                    left: 10%;
+                }
+                &-part{
+                    width: 100%;
+                    transition: 0.5s;
+                    opacity: 0;
+                    transform: translateX(-30px);
+                    max-width: 710px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    &-box{
+                        border: 1px solid white;
+                        background-color: transparent;
+                        margin: 25px 0;
+                        &-title{
+                            font-weight: bold;
+                            font-size: 35px;
+                            transform: translateX(15%) translateY(60%);
+                        }
+                        &-text{
+                            font-size: 25px;
+                            transform: translateX(10%) translateY(20%);
+                        }
+                    }
+                    .secondBox{
+                        h2{
+                            transform: translateX(-15%) translateY(60%);         
+                        }
+                        p{
+                            transform: translateX(-10%) translateY(20%);   
+                        }
+                    }
+                    &:nth-child(2){
+                        transform: translateX(30px);
+                    }
+                }
+                .emergedPart{
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                &:nth-child(2){
+                    justify-content: flex-end;
+                    margin-bottom: 100px;
+                }
+            }
+        }
+    }
+}
+.section-myProjects{
+    padding-bottom: 200px;
+    &-container{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &-text{
+            text-align: center;
+            margin-top: 30px;
+            font-size: 36px;
+        }
+        &-sliderBox{
+            margin-top: 200px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &-arrowSide{
+                width: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span{
+                    font-size: 140px;
+                    color: #fff;
+                    transition: 0.5s;
+                    line-height: 108px;
+                    cursor: pointer;
+                    &:hover{
+                        transform: translateX(5px);
+                    }
+                }
+            }
+            &-mainPart{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &-content{
+                    width: 63%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    a{
+                        width: 100%;
+                    }
+                    &-image{
+                        transition: 0.5s;
+                        width: 100%;
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        cursor: pointer;
+                        img{
+                            width: 100%;
+                        }
+                        &-name{
+                            max-width: 410px;
+                            left: 0;
+                            position: absolute;
+                            pointer-events: none;
+                            mix-blend-mode: difference;
+                            transform: translateX(-50%);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            text-align: center;
+                            &-sup{
+                                font-size: 30px;
+                                line-height: 30px;
+                            }
+                            &-title{
+                                font-size: 100px;
+                                line-height: 90px;
+                            }
+                            &-desc{
+                                line-height: 50px;
+                                font-size: 50px;
+                            }
+                        }
+                        &-text{
+                            right: 0;
+                            position: absolute;
+                            pointer-events: none;
+                            mix-blend-mode: difference;
+                            width: 250px;
+                            max-width: 90%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            transform: translateX(60%);
+                            &-li{
+                                font-size: 20px;
+                                text-align: left;    
+                            }
+                        }
+                    }
+                }
+                &:nth-child(1){
+                    display: flex;
+                }
+                &:nth-child(2){
+                    display: none;
+                }
+                &:nth-child(3){
+                    display: none;
+                }
+                &:nth-child(4){
+                    display: none;
+                }
+                &:nth-child(5){
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.section-contactMe{
+    overflow-y: hidden;
+    padding-bottom: 100px;
+    &-container{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        &-top{
+            width: 100%;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        &-bottom{
+            margin-top: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &-image{
+                margin-right: 100px;
+                border-radius: 50%;
+                width: 300px;
+                height: 300px;
+            }
+            &-desc{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                &-text{
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1199px){
+    .section-home{
+        &-container{
+            &-desc{
+                margin: 250px 25px 250px 0;
+                &-title{
+                    font-size: 55px;
+                }
+            }
+        }
+    }
+    .section-aboutMe{
+        &-container{
+            &-desc{
+                &-sec{
+                    &-skill{
+                        right: 0;
+                        transform: rotate(90deg);
+                    }
+                    .secondSkill{
+                        left: -40px;
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+        }
+    }
+    .section-myProjects{
+        &-container{
+            &-sliderBox{
+                margin-top: 300px;
+                &-mainPart{
+                    &-content{
+                        width: 100%;
+                        &-image{
+                            &-name{
+                                left: 50%;
+                                top: 0;
+                                transform: translateY(-100%) translateX(-50%);
+                            }
+                            &-text{
+                                left: 50%;
+                                bottom: 0;
+                                right: auto;
+                                background-color: @green;
+                                width: 100%;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                align-items: center;
+                                transform: translateY(200%) translateX(-50%) rotate(3deg);
+                                &-li{
+                                    text-align: center;
+                                    transform: rotate(-3deg);
+                                    margin: 0 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 991px){
+    h1{
+        text-align: center;
+    }
+    .section-home{
+        padding-bottom: 100px;
+        &-container{
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            &-desc{
+                max-width: none;
+                width: 100%;
+                margin: 0;
+                margin-top: 100px;
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                }
+            }
+            &-nav{
+                width: 100%;
+                order: -1;
+                &-list{
+                    width: 100%;
+                    &-link{
+                        &::before{
+                            height: 100px;
+                        }
+                    }
+                    .secondLink{
+                        &::before{
+                            height: 100px;
+                        }
+                    }
+                    .thirdLink{
+                        &::before{
+                            height: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section-aboutMe{
+        &-container{
+            &-desc{
+                &-sec{
+                    &-skill{
+                        top: 25px;
+                        transform: rotate(0);
+                    }
+                    .secondSkill{
+                        top: 25px;
+                        right: 0;
+                        left: auto;
+                        transform: rotate(0);
+                    }
+                    &-part{
+                        max-width: 90%;
+                    }
+                }
+            }
+        }
+    }
+    .section-myProjects{
+        &-container{
+            &-sliderBox{
+                margin-top: 50px;
+                flex-direction: column;
+                &-arrowSide{
+                    order: -1;
+                    margin-bottom: 280px;
+                }
+                &-mainPart{
+                    &-content{
+                        &-image{
+                            &-name{
+                                min-width: 370px;
+                                &-title{
+                                    font-size: 90px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section-contactMe{
+        &-container{
+            &-bottom{
+                justify-content: space-between;
+                &-image{
+                    margin-right: 0;
+                }
+                &-desc{
+                    &-text{
+                        font-size: 33px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 767px){
+    h1{
+        font-size: 120px;
+    }
+    .section-home{
+        &-container{
+            &-nav{
+                .secondLink{
+                    &::before{
+                        height: 150px;
+                    }
+                }
+            }
+        }
+    }
+    .section-aboutMe{
+        &-container{
+            &-desc{
+                &-sec{
+                    &-skill{
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .section-myProjects{
+        &-container{
+            &-sliderBox{
+                &-mainPart{
+                    &-content{
+                        &-image{
+                            &-name{
+                                &-title{
+                                    font-size: 65px;
+                                    line-height: 65px;
+                                }
+                            }
+                            &-text{
+                                justify-content: center;
+                                flex-wrap: wrap;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section-contactMe{
+        &-container{
+            &-bottom{
+                flex-direction: column;
+                &-desc{
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 575px){
+    .myContainer{
+        padding: 0 25px;
+    }
+    h1{
+        font-size: 68px;
+    }
+    .section-home{
+        &-container{
+            &-desc{
+                margin-top: 50px;
+                &-title{
+                    font-size: 43px;
+                }
+                .text{
+                    font-size: 30px;
+                }
+                &-button{
+                    font-size: 24px;
+                    &:hover{
+                        letter-spacing: 4px;
+                    }
+                }
+            }
+            &-nav{
+                &-list{
+                    &-link{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .section-aboutMe{
+        &-container{
+            &-desc{
+                &-sec{
+                    &-skill{
+                        font-size: 25px;
+                        top: 0;
+                        right: 50%;
+                        transform: translateX(50%) translateY(-100%);
+                    }
+                    .secondSkill{
+                        top: 0;
+                        right: 50%;
+                        transform: translateX(50%) translateY(-100%);
+                    }
+                    &-part{
+                        .secondBox{
+                            h2{
+                                transform: translateX(-15%) translateY(40%);
+                            }
+                            p{
+                                transform: translateX(-10%) translateY(10%);
+                            }
+                        }
+                        &-box{
+                            &-title{
+                                transform: translateX(15%) translateY(40%);
+                            }
+                            &-text{
+                                transform: translateX(10%) translateY(10%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section-myProjects{
+        overflow-x: hidden;
+        &-container{
+            padding: 0;
+            &-title{
+                padding: 0 25px;
+            }
+            &-sliderBox{
+                margin-top: 20px;
+                &-arrowSide{
+                    margin-bottom: 230px;
+                }
+                &-mainPart{
+                    &-content{
+                        &-image{
+                            &-name{
+                                min-width: unset;
+                                width: 100%;
+                                padding: 0 25px;
+                            }
+                            &-text{
+                                left: 50%;
+                                bottom: 0;
+                                width: 100%;
+                                padding: 0 25px;
+                                transform: translateX(-50%) translateY(125%) rotate(3deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section-contactMe{
+        &-container{
+            &-bottom{
+                &-image{
+                    width: 270px;
+                    height: 270px;
+                }
+                &-desc{
+                    &-text{
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+    }
+}
